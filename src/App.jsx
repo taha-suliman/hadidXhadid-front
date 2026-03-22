@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { LangProvider } from './contexts/LangContext'
 import { AuthProvider } from './contexts/AuthContext'
 import AuthPage from './pages/AuthPage';
@@ -14,7 +14,7 @@ import './index.css'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <LangProvider>
         <AuthProvider>
           <Routes>
@@ -29,6 +29,6 @@ export default function App() {
           </Routes>
         </AuthProvider>
       </LangProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
